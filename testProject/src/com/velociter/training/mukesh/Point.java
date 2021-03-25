@@ -12,7 +12,7 @@ public class Point
 		secondPoint=secondPointValue;
 	}
 	// Create a point from another Point object
-	public Point(Point oldPoint) 
+	public Point(final Point oldPoint) 
 	{
 		firstPoint=oldPoint.firstPoint;					// Copy firstPoint coordinate
 		secondPoint=oldPoint.secondPoint;				//// Copy secondPoint coordinate
