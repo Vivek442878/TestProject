@@ -6,7 +6,7 @@ public class TestRectangle
 	
 		  public static void main(String args[])
 		  {
-		    Rectangle[] rects = new Rectangle[1];
+		    Rectangle[] rects = new Rectangle[4];
 		    Rectangle enclosing;
 		 
 		    // Initialize the rectangles as arbitrary sizes and at arbitrary positions:
