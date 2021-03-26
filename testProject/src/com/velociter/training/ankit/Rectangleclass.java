@@ -65,8 +65,7 @@ class Point {
   }
 }
 
-
-    class Rectangleclass
+class Rectangleclass
 	{
 	  
     	  public static void main(String args[]) 
