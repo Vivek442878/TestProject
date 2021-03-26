@@ -28,9 +28,9 @@ public class LengthMeasurement
 	  }
 	  public LengthMeasurement(int meters ,int centimeters ,int millimeters )
 	  {
-		  meters = meters;
-		  centimeters= centimeters;
-		  millimeters = millimeters;
+		  this.meters = meters;
+		  this.centimeters= centimeters;
+		  this.millimeters = millimeters;
 	  }
 	 
 	  public LengthMeasurement(double centimeters )
@@ -42,7 +42,7 @@ public class LengthMeasurement
 	  {
 		  meters = millimeters / MILLIMETER_IN_METER;
 		  centimeters = (millimeters -meters * MILLIMETER_IN_METER)/ MILLIMETER_IN_CENTIMETER;
-		  millimeters = millimeters - meters * MILLIMETER_IN_METER;// - centimeters * MILLIMETER_IN_CENTIMETER;
+		  millimeters = millimeters - meters * MILLIMETER_IN_METER - centimeters * MILLIMETER_IN_CENTIMETER;
 		  mm = millimeters;
 	  }
 	  

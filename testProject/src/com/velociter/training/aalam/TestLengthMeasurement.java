@@ -15,9 +15,10 @@ public class TestLengthMeasurement {
 	public static void main(String[] args) 
 	{
 		
-		LengthMeasurement mcmlengthObjectmm = new LengthMeasurement();  //create object with millimeter value
-		LengthMeasurement  objectWithDoubleValue = new LengthMeasurement(2000.6); 
-		System.out.println(objectWithDoubleValue.toString());
+		LengthMeasurement objectWithMMvalue = new LengthMeasurement(1020);  //create object with millimeter value
+		LengthMeasurement  objectWithCMvalue = new LengthMeasurement(1400.89); 
+		System.out.println(objectWithMMvalue.toString());
+		System.out.println(objectWithCMvalue.toString());
 		
 	}
 
