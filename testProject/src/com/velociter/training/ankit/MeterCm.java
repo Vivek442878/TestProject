@@ -1,6 +1,7 @@
 package com.velociter.training.ankit;
 
-public class MeterCm {
+public class MeterCm
+  {
 	
 	  public static  int CM_M = 100;
 	  public static final int MM_CM = 10;

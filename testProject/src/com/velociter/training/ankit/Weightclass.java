@@ -1,6 +1,7 @@
 package com.velociter.training.ankit;
 
-public class Weightclass {
+public class Weightclass 
+{
 	
 	public static final int KG_TON = 1000;
 	  public static final int GRAMS_KG = 1000;
