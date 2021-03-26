@@ -14,12 +14,31 @@ public class TestLengthMeasurement {
 
 	public static void main(String[] args) 
 	{
+		//creating array for LengthMeasurement[] class with size 4 witch hold 4 objects
+		LengthMeasurement[] lengths  = new LengthMeasurement[4];
 		
-		LengthMeasurement objectWithMMvalue = new LengthMeasurement(1020);  //create object with millimeter value
-		LengthMeasurement  objectWithCMvalue = new LengthMeasurement(1400.89); 
-		System.out.println(objectWithMMvalue.toString());
-		System.out.println(objectWithCMvalue.toString());
+		//Testing all the constructor what we created inside the LengthMeasurement class
+		lengths[0]   = new LengthMeasurement(380,40,5);    //call 3 arguments constructors
+		lengths[1]   = new LengthMeasurement(339);         // call 1 int argument constructor
+		lengths[2]   = new LengthMeasurement(480.78);      // call 1 double argument constructor
+		lengths[3]   = new LengthMeasurement();            //call no-argument constructors
+         System.out.println("========================INPUT==============================");
+         System.out.println("");
+		//display the object data
+		for(int i = 0 ; i < lengths.length ; ++i) 
+		{
+		      System.out.println("Length of " + i +" "+"object is " + lengths[i]);
+		}
+		 System.out.println("");
+		 System.out.println("===========================OUTPUT=============================");
+		 System.out.println("");
+		 // Test the arithmetic and area operations
 		
+		 System.out.println("Addition of 2 length objects : ("+lengths[0]+" +  " +lengths[1] +")  = "+ lengths[0].add(lengths[1]));
+		 System.out.println("Substraction of 2 length objects : ("+lengths[0]+" -  " +lengths[1] +")  = "+ lengths[0].add(lengths[1]));
+		 System.out.println("Multiplication  of  : ("+lengths[0]+" *  " +5  +")  = "+ lengths[0].multiply(5));   //multiply by 5
+		 System.out.println("Division : ("+lengths[0]+" /  " +8  +")  = "+ lengths[0].divide(8));
+		  System.out.println("Area of 2 object "  + lengths[0] + " by " + lengths[1] + " is " + lengths[0].area(lengths[1]) + " square mm");
 	}
 
 }

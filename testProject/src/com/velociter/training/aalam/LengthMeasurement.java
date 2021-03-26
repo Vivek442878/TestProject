@@ -13,42 +13,88 @@ package com.velociter.training.aalam;
 public class LengthMeasurement 
 {
 
-	public static final int CENTIMETER_IN_METER = 100;
-	public static final int MILLIMETER_IN_CENTIMETER = 10;
-	public static final int MILLIMETER_IN_METER = 1000;
+	public static final int CENTIMETER_PER_METER = 100;
+	public static final int MILLIMETER_PER_CENTIMETER = 10;
+	public static final int MILLIMETER_PER_METER = 1000;
 	
 	// Private member variables:
-	  private int meters ,centimeters, millimeters;
-	  public int mm=0;
-	  
-	  
+	  private int meter ,centimeter, millimeter;
+
 	  public LengthMeasurement()     
 	  {
 		//no-argument constructor
 	  }
-	  public LengthMeasurement(int meters ,int centimeters ,int millimeters )
+	  public LengthMeasurement(int meter ,int centimeter ,int millimeter )
 	  {
-		  this.meters = meters;
-		  this.centimeters= centimeters;
-		  this.millimeters = millimeters;
+		  this.meter = meter;
+		  this.centimeter= centimeter;
+		  this.millimeter = millimeter;
 	  }
 	 
-	  public LengthMeasurement(double centimeters )
+	  public LengthMeasurement(double centiMeter )
 	  {
-		  this((int)Math.round(centimeters*MILLIMETER_IN_CENTIMETER));
+		  this((int)Math.round(centiMeter *MILLIMETER_PER_CENTIMETER));
 	  }
 	   
-	  public LengthMeasurement(int millimeters)
-	  {
-		  meters = millimeters / MILLIMETER_IN_METER;
-		  centimeters = (millimeters -meters * MILLIMETER_IN_METER)/ MILLIMETER_IN_CENTIMETER;
-		  millimeters = millimeters - meters * MILLIMETER_IN_METER - centimeters * MILLIMETER_IN_CENTIMETER;
-		  mm = millimeters;
+	  public LengthMeasurement(int milliMeter)
+	  {   
+		
+		  meter = milliMeter / MILLIMETER_PER_METER;
+		  centimeter = (milliMeter -meter * MILLIMETER_PER_METER)/ MILLIMETER_PER_CENTIMETER;
+		  millimeter = milliMeter - meter * MILLIMETER_PER_METER - centimeter * MILLIMETER_PER_CENTIMETER;
+		  
+		  
 	  }
 	  
+	 //override toString to display output in M,CM,MM
 	  public String toString()
 	  {
-		  return Integer.toString(meters) + "m " + centimeters + "cm " + mm + "mm";
+		  return Integer.toString(meter) + "m " + centimeter + "cm " + millimeter + "mm";
 		                                                               
 	  }
+	  
+	  
+	  public int toMillimeter()
+	  { 
+		  return meter * MILLIMETER_PER_METER + centimeter * MILLIMETER_PER_CENTIMETER + millimeter;  //mm is millimeter
+	  }
+	  
+	  
+	  public double changeIntoMeter() 
+	  {
+		  return meter + ((double)(centimeter)) / CENTIMETER_PER_METER + ((double)(millimeter))/MILLIMETER_PER_METER;
+	  }
+	  
+	  // All methods (add() ,substract(),divide(), multiply() use the changeIntoMillimeter()
+	  //add()
+	  public LengthMeasurement add(LengthMeasurement length)
+	  {
+	    return new LengthMeasurement(toMillimeter()+length.toMillimeter());    //14009 mm + 14.009 meter == 28m,1cm,8mm
+	  }
+	  
+	  
+	  //substract()
+	  public LengthMeasurement subtract(LengthMeasurement length)
+	  {
+	    return new LengthMeasurement(toMillimeter()-length.toMillimeter());   // 14009 mm -14.009 meter ==
+	  }
+	  
+	  //multiplication
+	  public LengthMeasurement multiply(int multiplyValue)
+	  {
+	    return new LengthMeasurement(multiplyValue * toMillimeter());                             //  14009 mm * inputValue(eg.2)  ==28018
+	  }
+	  
+	  //division
+	  public LengthMeasurement divide(int divisibleValue)
+	  {
+	    return new LengthMeasurement(toMillimeter() / divisibleValue);
+	  }
+	  
+	//Calculate area in square mm
+	  public long area(LengthMeasurement length) {
+	    return (toMillimeter() * length.toMillimeter());
+	  }
+	 
+	
 }
