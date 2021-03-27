@@ -3,7 +3,7 @@
 similar range of methods and constructors as
  */
 
-package com.velociter.training.aalam;
+package com.velociter.training.aalam.measures;
 
 public class TestWeigtMeasurment {
 

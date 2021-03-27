@@ -8,7 +8,7 @@ and millimeters; one integer argument in millimeters; one double argument in cen
 and no arguments, which creates an object with the length set to zero. Check the class
 by creating some objects and testing the class operations.
  */
-package com.velociter.training.aalam;
+package com.velociter.training.aalam.measures;
 
 public class LengthMeasurement 
 {
