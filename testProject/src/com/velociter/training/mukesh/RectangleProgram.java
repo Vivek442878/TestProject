@@ -1,4 +1,4 @@
-/*Problem Description:
+/*Problem Descriptions:
 =============================
 1. Define a class for rectangle objects defined by two points, the top-left and bottom right corners of the rectangle.
 
