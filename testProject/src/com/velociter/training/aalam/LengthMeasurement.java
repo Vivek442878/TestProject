@@ -28,9 +28,9 @@ public class LengthMeasurement
 	  {
 		  if(meter>=0 && centimeter >=0 && millimeter >=0 )
 		  {
-			  this.meter = meter;
-			  this.centimeter= centimeter;
-			  this.millimeter = millimeter;
+			 meter = this.meter;
+			 centimeter= this.centimeter;
+			 millimeter = this.millimeter;
 		  }else
 		  {
 			  System.out.println("Invalid Values.Please Try Again With Valid Values");
