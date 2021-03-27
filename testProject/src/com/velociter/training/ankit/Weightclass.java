@@ -37,9 +37,7 @@ public class Weightclass {
 		    return Integer.toString(ton) + "ton " + kilogram + "kilogram " + gram + "gram";
 		  }
 	 
-	 private void showTotalRectangle() {
-		 
-	 }
+	
 	 
 
 	public static void main(String ar[])
@@ -47,14 +45,14 @@ public class Weightclass {
 		Weightclass[] weight=new Weightclass[4];
 		weight[0]=new Weightclass(1202500);
 		weight[1]=new Weightclass(12025);
-		weight[2]=new Weightclass(8585.96);
+		weight[2]=new Weightclass(8,85,5);
 		weight[3]=new Weightclass(15522500);
 		for(int i=0;i<4;i++)
 		{	
 		System.out.println(weight[i].toString());
 	    }
 		
-		System.out.println("Total Weight is="+total_ton+"ton"+total_kilogram+"kilogram"+total_gram+"gram");
+		//System.out.println("Total Weight is="+total_ton+"ton"+total_kilogram+"kilogram"+total_gram+"gram");
 		
 		
 		
