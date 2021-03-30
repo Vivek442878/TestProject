@@ -3,7 +3,7 @@
 similar range of methods and constructors as the previous example. Demonstrate this class by
 creating and combining some class objects.
  */
-package com.velociter.training.aalam;
+package com.velociter.training.aalam.measures;
 
 public class WeightMeasurment
 {

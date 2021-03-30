@@ -13,9 +13,9 @@ public class Point
 	  }
 	 
 	  // Create a Point object by another Point reference ( constructor)
-	  public Point(final Point oldpPoint) {
-	   this.xCoordinate = oldpPoint.xCoordinate;
-	    this.yCoordinate = oldpPoint.yCoordinate;
+	  public Point(final Point oldPoint) {
+	   this.xCoordinate = oldPoint.xCoordinate;
+	    this.yCoordinate = oldPoint.yCoordinate;
 	  }
 	
 	 

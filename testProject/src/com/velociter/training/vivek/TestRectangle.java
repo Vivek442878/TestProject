@@ -22,7 +22,8 @@ public class TestRectangle
 		 
 		    // Combine it with each the other rectangles in turn.
 		    // This will result in the rectangle that encloses them all.
-		    for(Rectangle rect : rects)  {
+		    for(Rectangle rect : rects) 
+		    {
 		      enclosing = enclosing.encloses(rect);
 		    }
 		 

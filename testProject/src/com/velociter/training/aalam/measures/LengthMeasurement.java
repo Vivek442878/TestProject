@@ -8,7 +8,7 @@ and millimeters; one integer argument in millimeters; one double argument in cen
 and no arguments, which creates an object with the length set to zero. Check the class
 by creating some objects and testing the class operations.
  */
-package com.velociter.training.aalam;
+package com.velociter.training.aalam.measures;
 
 public class LengthMeasurement 
 {
@@ -28,9 +28,9 @@ public class LengthMeasurement
 	  {
 		  if(meter>=0 && centimeter >=0 && millimeter >=0 )
 		  {
-			 meter = this.meter;
-			 centimeter= this.centimeter;
-			 millimeter = this.millimeter;
+			  this.meter = meter;
+			  this.centimeter= centimeter;
+			  this.millimeter = millimeter;
 		  }else
 		  {
 			  System.out.println("Invalid Values.Please Try Again With Valid Values");
