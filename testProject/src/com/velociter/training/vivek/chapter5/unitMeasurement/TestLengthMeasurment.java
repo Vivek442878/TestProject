@@ -9,6 +9,8 @@ public class TestLengthMeasurment
 		 
 		    // Test the constructors:
 		    lengths[0] = new LengthMeasurment(274.65);
+		    
+		  //  System.out.println(lengths[0]);
 		    lengths[1] = new LengthMeasurment(274);
 		    lengths[2] = new LengthMeasurment(274,2,3);
 		    lengths[3] = new LengthMeasurment();

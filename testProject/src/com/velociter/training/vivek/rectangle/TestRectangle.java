@@ -1,10 +1,11 @@
-package com.velociter.training.vivek;
+package com.velociter.training.vivek.rectangle;
 
 public class TestRectangle
 
 {
 	
 		  public static void main(String args[])
+		  
 		  {
 		    Rectangle[] rects = new Rectangle[4];
 		    Rectangle enclosing;

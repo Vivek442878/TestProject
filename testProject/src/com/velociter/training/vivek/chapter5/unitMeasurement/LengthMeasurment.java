@@ -43,12 +43,14 @@ public class LengthMeasurment
 	  // Replaces the default toString method in Object:
 	  public String toString()
 	  {
-	    return meters + "m " + centimeters + "cm " + millimeters + "m";
+	    return meters + "m " + centimeters + "cm " + millimeters + "mm";
 	  }
 	 
 	  public int toMilliMeter() 
 	  {
+		  //System.out.println("return type of the to millimeter"+ meters*MILLIMETER_PER_METER + centimeters*MILLIMETER_PER_CENTIMETER + millimeters);
 	    return meters*MILLIMETER_PER_METER + centimeters*MILLIMETER_PER_CENTIMETER + millimeters;
+	    
 	  }
 	 
 	 
@@ -60,6 +62,7 @@ public class LengthMeasurment
 	  // All of the following methods use the toMilliMeter():
 	  public LengthMeasurment add(LengthMeasurment length)
 	  {
+		System.out.println("measurement of To millim"+toMilliMeter());  
 	    return new LengthMeasurment(toMilliMeter()+length.toMilliMeter());
 	  }
 	 

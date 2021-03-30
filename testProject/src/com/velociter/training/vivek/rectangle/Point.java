@@ -1,4 +1,4 @@
-package com.velociter.training.vivek;
+package com.velociter.training.vivek.rectangle;
 
 public class Point
 
