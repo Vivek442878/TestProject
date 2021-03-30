@@ -23,7 +23,7 @@ Check the class by creating some objects and testing the class operations.
  
 
 
-package com.velociter.training.mukesh;
+package com.velociter.training.mukesh.measurment;
 
 class LengthMeasurment 
 {
@@ -139,7 +139,7 @@ class LengthMeasurment
 }
 
 
- // TestLengthMeasurment class contain main method body
+ // TestLength class contain main method body
  public class TestLengthMeasurment
 {
 	public static void main(String[] args) 
