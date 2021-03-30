@@ -27,24 +27,28 @@ public class RectangleShape
     private Point bottomRight;
     
     //here we are using constructor overloading
-    //in below constructor   will get minimum and maximum coordinate point for rectangle
+    //in below constructor   will get minimum and maximum coordinate point for rectangle from main()
 
     public RectangleShape(double x1, double y1, double x2, double y2) 
     {
-       
         topLeft =  new Point(Math.min(x1,x2),Math.min(y1,y2));      //here we will get (minimum x1 and y1 coordinate)
         bottomRight = new Point(Math.max(x1,x2),Math.max(y1,y2));   //here we will get (maximum x2 and y2 coordinate)
     }
     
-  //2 -Include a constructor to copy a rectangle
-    public RectangleShape(final RectangleShape rectangleOject)                        //to get x and y from Point class and also from RectangleShape class
+    
+   
+    public RectangleShape(Point tl, Point br) 
     {
-    	rectangleOject.topLeft=topLeft;
-    	rectangleOject.bottomRight =bottomRight;         
+        this(tl.getX(), tl.getY(), br.getX(), br.getY());
+     }
+    
+    public RectangleShape(RectangleShape rect) 
+    {
+        topLeft = new Point(rect.topLeft);
+        bottomRight = new Point(rect.bottomRight);
     }
     
-    
-    // Return a new rectangle defined by the minimum x,y for to left and the and maximum x,y for bottom right
+    // Return a new rectangle defined by the minimum x,y for to topLeft and the and maximum x,y for bottomRight
     //purpose -to get actual minimum x1,y1 axis and maximum x2 and y2 axis 
   //3 -a method to return a rectangle object that encloses the current object and the rectangle passed as an argument,
     public RectangleShape enclosing(RectangleShape rect)

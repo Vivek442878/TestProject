@@ -1,4 +1,4 @@
-package com.velociter.training.ankit;
+package com.velociter.training.ankit.measurment;
 
 public class TestWeightMeasurment {
 	
@@ -61,8 +61,8 @@ public class TestWeightMeasurment {
 		
 		System.out.println(weight1.toString());
 		System.out.println(weight2.toString());
-		System.out.println("addition :"+weight1+"to"+weight2+"is "+weight1.add(weight2));
-		System.out.println("subtraction :"+weight1+"to"+weight2+"is "+weight1.subtract(weight2));
+		System.out.println("add :"+weight1.add(weight2));
+		System.out.println("subtraction :"+weight1.subtract(weight2));
 		System.out.println("multiplication of  "+weight1.toString()+" by 25 :"+weight1.multiply(25));
 		System.out.println("multiplication of  "+weight2.toString()+" by 25 :"+weight2.multiply(25));
 		System.out.println("Division :"+weight1.divide(9));

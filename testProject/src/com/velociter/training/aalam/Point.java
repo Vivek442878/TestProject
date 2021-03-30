@@ -7,15 +7,17 @@ public class Point
 	private double yCoordinate ;
 	
 	// Create a Point object by using given  coordinate value x ,y
-	  public Point(double xCoordinate, double yCoordinate) {
+	  public Point(double xCoordinate, double yCoordinate)
+	  {
 	    this.xCoordinate = xCoordinate;
 	    this.yCoordinate = yCoordinate;
 	  }
 	 
 	  // Create a Point object by another Point reference ( constructor)
-	  public Point(final Point oldpPoint) {
-	   this.xCoordinate = oldpPoint.xCoordinate;
-	    this.yCoordinate = oldpPoint.yCoordinate;
+	  public Point(final Point oldPoint)
+	  {
+	   this.xCoordinate = oldPoint.xCoordinate;
+	   this.yCoordinate = oldPoint.yCoordinate;
 	  }
 	
 	 

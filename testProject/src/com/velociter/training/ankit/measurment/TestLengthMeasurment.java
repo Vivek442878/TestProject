@@ -1,4 +1,4 @@
-package com.velociter.training.ankit;
+package com.velociter.training.ankit.measurment;
 
 public class TestLengthMeasurment {
 	
