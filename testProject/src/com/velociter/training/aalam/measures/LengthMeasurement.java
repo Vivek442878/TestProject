@@ -28,9 +28,9 @@ public class LengthMeasurement
 	  {
 		  if(meter>=0 && centimeter >=0 && millimeter >=0 )
 		  {
-			  this.meter = meter;
-			  this.centimeter= centimeter;
-			  this.millimeter = millimeter;
+			 this.meter = meter;
+			 this.centimeter= centimeter;
+			 this.millimeter = millimeter;
 		  }else
 		  {
 			  System.out.println("Invalid Values.Please Try Again With Valid Values");
@@ -75,6 +75,10 @@ public class LengthMeasurement
 		  return meter * MILLIMETER_PER_METER + centimeter * MILLIMETER_PER_CENTIMETER + millimeter;  //mm is millimeter
 	  }
 	  
+	  public double toMeters()
+	  {
+		    return meter + ((double)(centimeter))/CENTIMETER_PER_METER + ((double)(millimeter))/MILLIMETER_PER_METER;
+	  }
 	 
 	  
 	  // All methods (add() ,substract(),divide(), multiply() use the changeIntoMillimeter()
